@@ -1,0 +1,12 @@
+<h1>One Dog</h1>
+
+<ul>
+    <%= link_to @dog.name+" is a "+@dog.breed+" and I'm "+@dog.age.to_s+" years old", dog_path(@dog.id) %>
+    
+    <div><br>These employees belong to me: </div>
+
+    <% @employees.each do |e| %>
+        <br>
+        <%= link_to e.first_name+" "+e.last_name, employee_path(e.id)%>
+    <% end %>
+</ul>

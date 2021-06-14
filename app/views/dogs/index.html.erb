@@ -1,0 +1,8 @@
+<h1>Dog House</h1>
+
+<ul>
+    <% @dogs.each do |d| %>
+        <li><%= link_to d.name+" is a "+d.breed+" and I'm "+d.age+" years old", dog_path(d.id) %></li>
+    <% end %>
+</ul>
+
